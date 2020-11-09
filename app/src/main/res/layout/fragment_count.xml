@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CountFragment">
+
+    <ProgressBar
+        android:id="@+id/pb_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:minHeight="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cv_result_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_count" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Choose question category"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sp_category_count"
+        android:layout_width="291dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_spinner"
+        android:popupBackground="@color/purple_100"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.54" />
+
+    <Button
+        android:id="@+id/btn_start_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="404dp"
+        android:shadowColor="@color/purple_700"
+        android:text="Search Question Count !"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_result_count"
+        android:visibility="gone"
+        android:layout_width="320dp"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_count"
+        app:layout_constraintVertical_bias="0.32">
+
+        <LinearLayout
+            android:id="@+id/ll_question_count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_category_count_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_category_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="category"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_total_questions_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Questions: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_total_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="questions"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_pending_questions_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Pending Questions: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_pending_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="pending"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_verified_questions_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Verified Questions: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_verified_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="verified"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_rejected_questions_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Rejected Questions: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_rejected_questions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="rejected"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
