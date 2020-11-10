@@ -285,22 +285,26 @@ class GameFragment : Fragment() {
         cv_category_text.visibility = View.GONE
         cv_difficulty_text.visibility = View.GONE
         cv_question_text.visibility = View.GONE
+        cv_score.visibility = View.GONE
         rg_answers.visibility = View.GONE
         tv_result.visibility = View.GONE
         tv_answer_title.visibility = View.GONE
         tv_answer.visibility = View.GONE
         btn_next.visibility = View.GONE
+        btn_done.visibility = View.GONE
     }
 
     private fun showAllUI(){
         cv_category_text.visibility = View.VISIBLE
         cv_difficulty_text.visibility = View.VISIBLE
         cv_question_text.visibility = View.VISIBLE
+        cv_score.visibility = View.VISIBLE
         rg_answers.visibility = View.VISIBLE
         tv_result.visibility = View.VISIBLE
         tv_answer_title.visibility = View.VISIBLE
         tv_answer.visibility = View.VISIBLE
         btn_next.visibility = View.VISIBLE
+        btn_done.visibility = View.VISIBLE
     }
 
 }
